@@ -1,0 +1,39 @@
+//Classic Email Templete for "Low Stock Alert"
+//HTML Body
+<p>Dear {!Order__c.Customer__c},</p>
+
+<p><strong>Low Stock Alert!</strong></p>
+
+<p>The following items from your recent order #{!Order__c.Name} are currently low in stock:</p>
+
+<table border="1" cellpadding="5">
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Quantity Ordered</th>
+      <th>Current Stock Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <apex:repeat value="{!relatedTo.Order_Items__r}" var="orderItem">
+        <apex:outputText rendered="{!(orderItem.Product__r.Stock_Level__c <= 5) && (orderItem.Product__r.Stock_Level__c > 0) }">
+        
+                <tr>
+                    <td>{!orderItem.Product__r.Name}</td>
+                    <td>{!orderItem.Quantity__c}</td>
+                    <td>{!orderItem.Product__r.Stock_Level__c}</td>
+                </tr>
+        
+        </apex:outputText>
+       
+    </apex:repeat>
+  </tbody>
+</table>
+
+<p>We are working to replenish our stock as soon as possible.  We will notify you if there are any delays in fulfilling your order.</p>
+
+<p>Thank you for your patience and understanding.</p>
+
+<p>Best Regards,</p>
+
+<p>Sales Team</p>
