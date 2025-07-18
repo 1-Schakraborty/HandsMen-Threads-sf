@@ -1,5 +1,6 @@
 HandsMen Threads: Elevating the Art of Sophistication in Men's Fashion
 Developing a premium fashion platform to streamline men’s bespoke tailoring and enhance customer experience through personalized styling and seamless order management.
+==========================================================
 PROJECT OVERVIEW
 ================
 Phase 1: Architecture & Planning
@@ -36,3 +37,5 @@ Post-go-live support and monitoring
 
 Deliverable:
 Solution Design Document including Object Model, ERD, and Automation Strategy.
+URL of Salesforce Developer Account: https://orgfarm-29d257c56b-dev-ed.develop.my.salesforce.com
+
